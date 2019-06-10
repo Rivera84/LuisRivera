@@ -24,5 +24,10 @@ namespace Examen1Parcial
         {
             InitializeComponent();
         }
+
+        private void Salir(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

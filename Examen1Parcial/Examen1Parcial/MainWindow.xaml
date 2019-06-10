@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Examen1Parcial"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" >
+    <Grid Background="Aquamarine">
+        <Label HorizontalAlignment="Center" Margin="310,0,285,416.6" FontSize="20" Width="205" >Deducciones Usuarios</Label>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel   Background="White" Margin="10,40,0,10">
+                    <TextBlock Margin="10,30,258.4,0"><Run Text="Nombre del empleado"/></TextBlock>
+                    <TextBox  Margin="234,0,30,0" Text="{Binding Path= Nombre, Mode=TwoWay}"/>
+                    <TextBlock Margin="10,30,270,0"><Run Text="Identidad"/></TextBlock>
+                    <TextBox Margin="234,0,30,0" Text="{Binding Path= Identidad, Mode=TwoWay}"/>
+                    <TextBlock Margin="10,30,270,0"><Run Text="Horas trabajadas"/></TextBlock>
+                    <TextBox Margin="234,0,30,0" Text="{Binding Path= HrsTrabajadas, Mode=TwoWay}"/>
+                    <TextBlock Margin="10,30,206.4,0"><Run Text="Pago por hora normal de trabajo"/></TextBlock>
+                    <TextBox Margin="234,0,30,0" Text="{Binding Path= PagoHrsTrabajadas, Mode=TwoWay}"/>
+                    <TextBlock Margin="10,30,246.4,0"><Run Text="Horas extras trabajadas"/></TextBlock>
+                    <TextBox Margin="234,0,30,0" Text="{Binding Path= HrsExtras, Mode=TwoWay}"/>
+                    <TextBlock Margin="10,30,206.4,0"><Run Text="Pago por horas extras trabajadas"/></TextBlock>
+                    <TextBox Margin="234,0,30,0" Text="{Binding Path= PagoHrsExtras, Mode=TwoWay}"/>
+                </StackPanel>
+                </Grid>
+            <Grid Grid.Column="1">
+            <StackPanel Margin=" 10 40 10 10" >
+                    <TextBlock Margin="30,30,228,10" >Sueldo sin Deducciones</TextBlock>
+                    <TextBox Margin="207,0,54,0" Text="{Binding Path=SueldoSinDeducciones, Mode=TwoWay}"></TextBox>
+                    <TextBlock Margin="30,30,228,10" >Sueldo horas extras</TextBlock>
+                    <TextBox Margin="207,0,54,0" Text="{Binding Path=SueldoHorasExtras, Mode=TwoWay}"></TextBox>
+                    <TextBlock Margin="30,30,155,10" >Deducciones realizadas al empleado</TextBlock>
+                    <TextBox Margin="207,0,54,0" Text="{Binding Path=Deducciones, Mode=TwoWay}"></TextBox>
+                    <TextBlock Margin="30,30,207,10" >Sueldo total del empleado</TextBlock>
+                    <TextBox Margin="207,0,54,0" Text="{Binding Path=SueldoTotal, Mode=TwoWay}"></TextBox>
+                </StackPanel>
+            </Grid>
+            <Button Background="Red" Content="X" Margin="371,0,0,427.6" Grid.Column="1" Name="BTNsalir" Click="Salir"></Button> 
+            
+        </Grid>
     </Grid>
 </Window>
